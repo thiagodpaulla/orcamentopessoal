@@ -3,10 +3,10 @@
 # Hello and welcome to my repository
 ## Meet Personal orcament
 
-![](https:)
+![](https://github.com/thiagodpaulla/orcamentopessoal/blob/main/orcamento.gif)
 
 ## Feel free to interact with the project at the link:
-https://.
+https://thiagodpaulla.github.io/orcamentopessoal/
 
 ## Stretch a little more and, know a little more than I've been doing:
 
