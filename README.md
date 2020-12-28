@@ -1,46 +1,131 @@
-# orcamentopessoal
- orcamentopessoal
+[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/thiagodepaulla/)](https://www.linkedin.com/in/thiagodepaulla/)   [![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white&link=https://github.com/thiagodpaulla)](https://github.com/thiagodpaulla)
+
+# Hello and welcome to my repository
+## Meet Personal orcament
+
+![](https:)
+
+## Feel free to interact with the project at the link:
+https://.
+
+## Stretch a little more and, know a little more than I've been doing:
 
 
-###Cookes
+https://thiagodpaulla.github.io/
 
-utilizado o recurso web storage pois os navegadores modernos de forma geral implementam recursos de armazenamento de dados dentro do proprio navegador, antes do html 5 era usado o recurso de cookes mas com o advento do html 5  os browsers passaram a utilizar outros metodos para armazenamento local de dados, os cookes funcionam como dados que são armazenados do lado do cliente no browser e sempre que existe uma requisicao http ou seja, sempre que acessamos uma determnada pagina os cookies sao anexados a esta requisicao de tal modo que servidor tenha condicoes de acessar estas informacoes, extrair a sua logica de modo a entender as informaceos ja cadastradas no lado do cliente e apos este processamento fazer o retorno desta informacao requisitada pelo cliente, como nos sites de ecommerce que armazenam nossas consultas e nos retornam as consultas que fizemos, e isso é muito util pois fica armazenado do lado do cliente, e anexado na requisicao http, sendo permitido pelos servidores analisar requisicao por requisicao e retornar exatamente a logica de cada cliente.
-o caso do local storage e session storage sao parecidos com os cookies com o diferencial de nao serem anexados a uma requisicao http e ficam de fato no navegador de modo analogo a uma aplicacao front-end, e pelo fato de nao terem que ser transmitidos por uma requisicao http permite que seja armazenado muito mais informacoes.
-diferenca entre session storage e local storage
-
-###session storage 
-Armazena uma informacao enqualto o browser a instancia do navegador esta ativa, qyuando nos fechamos o navegador todas as informacoes mantidas nas instancias do navegador sao perdidas.
-
-###local storage 
-Podemos armazenar as informacoes fechar o as instancias do navegador, desligar a maquina ou reniciar a maquina e os dados iram persistir armazenados ate que ele seja intencionamente removidos.
+### Understand a little more about how it was created.
 
 
 
-###Notaçoes JSON
+  * [Project](#project)
+  * [Technologies](#technologies)
+  * [License](#license)
 
-Armazenar os dados dentro de local storage, convertendo um objeto literal para JSON
-tudo que vai dentro de uma string pode ser armazenado em um objeto mas no caso de uma notação tipo JSON esta string recebem algumas instruções como 
-'{'categoria':'eletrodomestico'}'
-mantendo chaves e valores encapisulados dentro das aspas intenamente também.
+#Project
+
+This project proposes the creation of a CRUD (Create, Read, Update and Delete), containing personal expense information in a fast and objective way.
 
 
-Recuperando um objeto literal previamente instanciado dentro da aplicação, e no processo de utlização deste objeto na função set item que vai abrir uma comunicação com o local storage, foi encaminhado um a representaçãco JSON deste objeto
-        gravar(despesa)
+
+of the resources used in the project i would like to highlight some below as more relevant at this specific moment.
+
+### Cookes
+
+
+
+used the web storage resource because modern browsers generally implement data storage resources within the browser itself, before html 5 the cookes resource was used but with the advent of html 5 browsers started to use other methods for local storage data, the cooks function as data that is stored on the client side in the browser and whenever there is an http request, that is, whenever we access a particular page, cookies are attached to this request in such a way that the server is able to access these information, extract your logic in order to understand the information already registered on the client side and after this processing make the return of this information requested by the client, as in the e-commerce sites that store our queries and return the queries we made, and this is very useful because it is stored on the client side, and attached to the http request, being allowed by the analytical servers request by request and return exactly the logic of each client.
+
+the case of local storage and session storage are similar to cookies with the difference of not being attached to an http request and are
+
+### Session storage
+
+Stores information while the browser the browser instance is active, when we close the browser all information kept in the browser instances is lost.
+
+
+
+### Local storage
+
+We can store the information, close the browser instances, shut down the machine or restart the machine and the data will remain stored until it is intentionally removed.
+
+
+
+
+
+
+
+### JSON notations
+
+
+
+Store data within local storage, converting a literal object to JSON
+
+everything that goes inside a string can be stored in an object but in the case of JSON notation this string receives some instructions like
+
+'{' category ':' household appliance '}'
+
+keeping keys and values ​​encapsulated inside the quotes internally as well.
+
+
+
+
+
+Retrieving a literal object previously instantiated within the application, and in the process of using this object in the set item function that will open a communication with the local storage, a JSON representation of this object was forwarded
+
+        record (expense)
+
 }
-function gravar(d){
-    localStorage.setItem('despesa', JSON.stringify(d))
+
+function record (d) {
+
+    localStorage.setItem ('expense', JSON.stringify (d))
+
 }
- de tal modo  que ao ser recuperado dentro da aplicação do outro lado no caso local storage a aplicação tenha a capacidade de fazer o parse desta informação convertendo em um novo objeto.
 
-a instancia de um objeto existe apenas dentro de uma aplicação quando ela precisar se comunicar com um servidor ou com outras aplicações, no caso uma aplicação local storage é uma aplicão interna do browser mas uma aplicação externa a minha aplicação, consequentemente é necessario comunicaçao e para tal é necessario criar um protocolo de comunicação para que possam se comunicar os dados, porem objetos literais eles não podem ser transitados neste processo isso porque eles são objetos e estes objetos existem apenas na instancia da aplicação, logo nos precisamos de alguma forma transcrever este objeto em uma notação tipo testo no caso a notação JSON para que este texto nseja anexado a esta comunicação que pode ser feita tanto com a o back end ou com outras aplicações e o JSON atuara no entanto neste meio de campo de comunicação pois ele é suprtado nativamente pelo javascript.
-Json é uma biblioteca inportante do javascript e a partir dela nos podemos utlizar o metodo strigfy que converte o projeto diretamente para um onjeto json sem a necessidade de ficar concatenando strings.
- o contrario também pode ser realizado tranformado um objeto JSCON em um objeto literal usando o metodo JSON.parse(produtoJSON)
-
- ###criação de indices dinamicos pra inclsuão de registro dentro de local storage
-
- recuperar os dados e inserir os dados no local storage, e agora é necessario gerar um novo registro conforme as criações forem feitas por isso necessario a criação de um indice dinamico, que ira incluir um novo intem sem sobrepor o indice anterior.
+ in such a way that when it is retrieved within the application on the other side in the local storage case the application has the ability to parse this information by converting it into a new object.
 
 
- ***Validação de dados 
- utilizando um componente do bootstrap chamado componente modal, ele exibe uma div na tela chamando a atenção do usuario para aquele respectivo ponto assim pondemos inserir as informaões que quero que o usuario se atente naquele momento em que ele esta digitando.
- 
+
+the instance of an object exists only within an application when it needs to communicate with a server or other applications, in this case a local storage application is an internal application of the browser but an application external to my application, therefore communication is necessary and for this is necessary to create a communication protocol so that the data can be communicated, however literal objects they cannot be passed in this process because they are objects and these objects exist only in the application instance, so we need some way to transcribe this object in a text type notation in this case the JSON notation for this text to be attached to this communication that can be done either with the back end or with other applications and JSON will act however in this medium of communication field as it is natively supplied by javascript.
+
+Json is an important javascript library and from it we can use the strigfy method that converts the project directly to a json object without having to concatenate strings.
+
+ the opposite can also be done by transforming a JSCON object into a literal object using the JSON.parse method (productJSON)
+
+
+
+ ### creation of dynamic indexes for inclusion of records within local storage
+
+
+
+ retrieve the data and insert the data into the local storage, and now it is necessary to generate a new record as the creations are made so it is necessary to create a dynamic index, which will include a new item without overlapping the previous index.
+
+
+
+
+
+ ### Data validation
+
+ using a bootstrap component called a modal component, it displays a div on the screen calling the user's attention to that respective point so we can insert the information that I want the user to be aware of at the moment when he is typing.
+
+ <option value="">Ano</option>
+
+            <option value="2019">2019</option>
+
+
+# Technologies
+
+🚀 The project was developed using the following technologies
+
+➜ Bootstrap
+
+➜ JavaScript
+
+➜ HTML
+
+➜ CSS
+
+
+# License
+📂 Distributed under the MIT license. See LICENSE for more information.
+
+
