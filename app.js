@@ -264,6 +264,8 @@ function pesquisarDespesa() {
     let despesas = bd.pesquisar(despesa)   
 
     carregaListaDespesas(despesas, true)
+
+    
         
     }
 
